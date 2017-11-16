@@ -7,5 +7,5 @@
 ##  http://twitter.com/JonathanSalwan
 ##
 
-import ropgadget.ropchain.arch.ropmakerx86
-import ropgadget.ropchain.arch.ropmakerx64
+import ropgadget.roplib.ropchain.arch.ropmakerx86
+import ropgadget.roplib.ropchain.arch.ropmakerx64

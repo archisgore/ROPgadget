@@ -1,14 +1,14 @@
 ## -*- coding: utf-8 -*-
 ##
 ##  Jonathan Salwan - 2014-05-13
-## 
+##
 ##  http://shell-storm.org
 ##  http://twitter.com/JonathanSalwan
-## 
+##
 
 from capstone           import *
-from ropgadget.ropchain.arch.ropmakerx86   import *
-from ropgadget.ropchain.arch.ropmakerx64   import *
+from ropgadget.roplib.ropchain.arch.ropmakerx86   import *
+from ropgadget.roplib.ropchain.arch.ropmakerx64   import *
 
 class ROPMaker(object):
     def __init__(self, binary, gadgets, offset):
@@ -32,4 +32,3 @@ class ROPMaker(object):
 
         else:
             print("\n[Error] ROPMaker.__handlerArch - Arch not supported yet for the rop chain generation")
-

@@ -1,16 +1,16 @@
 ## -*- coding: utf-8 -*-
 ##
 ##  Jonathan Salwan - 2014-05-12 - ROPgadget tool
-## 
+##
 ##  http://twitter.com/JonathanSalwan
 ##  http://shell-storm.org/project/ROPgadget/
-## 
+##
 
-from ropgadget.loaders.elf       import *
-from ropgadget.loaders.pe        import *
-from ropgadget.loaders.raw       import *
-from ropgadget.loaders.macho     import *
-from ropgadget.loaders.universal import *
+from ropgadget.roplib.loaders.elf       import *
+from ropgadget.roplib.loaders.pe        import *
+from ropgadget.roplib.loaders.raw       import *
+from ropgadget.roplib.loaders.macho     import *
+from ropgadget.roplib.loaders.universal import *
 from binascii import unhexlify
 
 class Binary(object):
@@ -18,7 +18,7 @@ class Binary(object):
         self.__fileName  = options.binary
         self.__rawBinary = None
         self.__binary    = None
-        
+
         try:
             fd = open(self.__fileName, "rb")
             self.__rawBinary = fd.read()
@@ -67,4 +67,3 @@ class Binary(object):
 
     def getFormat(self):
         return self.__binary.getFormat()
-

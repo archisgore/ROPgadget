@@ -1,17 +1,17 @@
 ## -*- coding: utf-8 -*-
 ##
 ##  Christoffer Brodd-Reijer - 2014-07-20 - ROPgadget tool
-## 
+##
 ##  http://twitter.com/ephracis
 ##  http://shell-storm.org/project/ROPgadget/
-## 
+##
 
 import sys
 
 from capstone   import *
 from ctypes     import *
 from binascii   import *
-from ropgadget.loaders.macho      import *
+from ropgadget.roplib.loaders.macho      import *
 
 
 class FAT_HEADER(BigEndianStructure):
@@ -93,7 +93,7 @@ class UNIVERSAL(object):
     def getArch(self):
         for binary in self.__machoBinaries:
             return binary.getArch()
-            
+
     def getArchMode(self):
         for binary in self.__machoBinaries:
             return binary.getArchMode()

@@ -6,7 +6,7 @@
 ##  http://shell-storm.org/project/ROPgadget/
 ##
 
-import ropgadget.loaders.elf
-import ropgadget.loaders.macho
-import ropgadget.loaders.pe
-import ropgadget.loaders.raw
+import ropgadget.roplib.loaders.elf
+import ropgadget.roplib.loaders.macho
+import ropgadget.roplib.loaders.pe
+import ropgadget.roplib.loaders.raw
